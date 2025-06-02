@@ -6,7 +6,7 @@ function Navbar() {
   const navigate = useNavigate();
   const user = getCurrentUser();
 
-  const handleLogout = () => {
+  const Logout = () => {
     logoutUser();
     navigate('/login');
   };
@@ -16,7 +16,7 @@ function Navbar() {
       <Link to="/">Home</Link>
       {!user && <Link to="/register">Register</Link>}
       {!user && <Link to="/login">Login</Link>}
-      {user && <button onClick={handleLogout}>Logout</button>}
+      {user && <button onClick={Logout}>Logout</button>}
     </nav>
   );
 }
